@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Colors</title>
+</head>
+<body id="main">
+    <div id="container"></div>
+    <button id="btn1">click for colors</button>
+    <script>
+        let getmain=document.getElementById("main");
+        getmain.style.backgroundColor="wheat";
+
+         function RandomColor() {
+        var red = Math.floor(Math.random() *254);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 252);
+        return 'rgb(' + red + ',' + green + ',' + blue + ')';
+       }
+       
+
+        function colorbox(){
+        let getdiv=document.getElementById("container");
+        getdiv.style.border="2px solid black";
+        getdiv.style.width="300px";
+        getdiv.style.height="300px";
+        getdiv.style.backgroundColor=RandomColor()
+        }
+     
+
+        let getBtn=document.getElementById("btn1");
+        getBtn.style.margin="5px";
+        getBtn.style.backgroundColor="gray";
+        getBtn.style.color="white";
+        getBtn.addEventListener("click",colorbox);
+
+        
+
+    </script>
+</body>
+</html>
